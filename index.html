@@ -8,17 +8,15 @@
   <style>
     :root {
       --blue: #0057a8;
-      --navy: #0b1f3a;
-      --cyan: #2bb3ff;
-      --soft: #f4f8fc;
+      --navy: #071f3f;
+      --cyan: #22b8ff;
+      --soft: #f3f8ff;
       --text: #1f2937;
       --muted: #667085;
       --card: #ffffff;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -31,8 +29,20 @@
     header {
       background: linear-gradient(135deg, var(--navy), var(--blue));
       color: white;
-      padding: 54px 24px;
+      padding: 44px 24px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .um-logo {
+      width: 150px;
+      max-width: 40vw;
+      margin-bottom: 18px;
+      background: white;
+      padding: 10px 16px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.18);
     }
 
     header h1 {
@@ -50,9 +60,11 @@
     }
 
     main {
-      max-width: 1100px;
-      margin: -36px auto 60px;
+      max-width: 1150px;
+      margin: -28px auto 60px;
       padding: 0 20px;
+      position: relative;
+      z-index: 2;
     }
 
     .card {
@@ -109,17 +121,7 @@
       color: var(--navy);
     }
 
-    .arrow {
-      color: var(--cyan);
-      font-size: 26px;
-      font-weight: 900;
-      text-align: center;
-      margin: 4px 0;
-    }
-
-    ol.references {
-      padding-left: 22px;
-    }
+    ol.references { padding-left: 22px; }
 
     ol.references li {
       margin-bottom: 20px;
@@ -133,9 +135,7 @@
       font-weight: 600;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
+    a:hover { text-decoration: underline; }
 
     .note {
       background: #eef7ff;
@@ -145,6 +145,229 @@
       color: var(--navy);
     }
 
+    /* POSTER PREVIEW */
+    .poster-wrap {
+      background: linear-gradient(135deg, #eef7ff, #ffffff);
+      border-radius: 28px;
+      padding: 24px;
+      border: 1px solid #d7ecff;
+      box-shadow: inset 0 0 40px rgba(34,184,255,0.08);
+    }
+
+    .poster {
+      background: white;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid #dceeff;
+      box-shadow: 0 24px 70px rgba(7,31,63,0.18);
+    }
+
+    .poster-top {
+      padding: 30px;
+      background:
+        radial-gradient(circle at top right, rgba(34,184,255,0.25), transparent 35%),
+        linear-gradient(135deg, #ffffff, #f5fbff);
+      display: grid;
+      grid-template-columns: 1fr 140px;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .poster-title h3 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(24px, 4vw, 42px);
+      line-height: 1.12;
+      letter-spacing: -0.5px;
+    }
+
+    .poster-title p {
+      margin: 14px 0 0;
+      color: #475467;
+      font-size: 15px;
+    }
+
+    .poster-logo {
+      width: 130px;
+      background: white;
+      padding: 10px;
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    }
+
+    .poster-body {
+      padding: 26px;
+      display: grid;
+      grid-template-columns: 1fr 1.35fr 1fr;
+      gap: 20px;
+    }
+
+    .poster-box {
+      background: #f8fbff;
+      border: 1px solid #dceeff;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .poster-box h4 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .poster-box p,
+    .poster-box li {
+      font-size: 13.5px;
+      color: #344054;
+      margin: 0 0 10px;
+    }
+
+    .smartwatch {
+      margin: 12px auto 20px;
+      width: 160px;
+      height: 210px;
+      border-radius: 42px;
+      background: linear-gradient(160deg, #081f3f, #0f74bc);
+      position: relative;
+      box-shadow: 0 20px 45px rgba(0,87,168,0.3);
+    }
+
+    .smartwatch:before,
+    .smartwatch:after {
+      content: "";
+      position: absolute;
+      left: 48px;
+      width: 64px;
+      height: 42px;
+      background: #0b1f3a;
+      z-index: -1;
+    }
+
+    .smartwatch:before {
+      top: -36px;
+      border-radius: 24px 24px 8px 8px;
+    }
+
+    .smartwatch:after {
+      bottom: -36px;
+      border-radius: 8px 8px 24px 24px;
+    }
+
+    .watch-screen {
+      position: absolute;
+      inset: 18px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35), transparent 20%),
+        linear-gradient(160deg, #09284c, #00a3ff);
+      color: white;
+      padding: 22px;
+      text-align: center;
+    }
+
+    .watch-screen .time {
+      font-size: 30px;
+      font-weight: 800;
+      margin-top: 20px;
+    }
+
+    .watch-screen .metric {
+      margin-top: 18px;
+      font-size: 13px;
+      opacity: 0.95;
+    }
+
+    .flow {
+      display: grid;
+      gap: 10px;
+    }
+
+    .flow div {
+      background: white;
+      border: 1px solid #d8ecff;
+      border-radius: 14px;
+      padding: 12px;
+      text-align: center;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 13px;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .topic {
+      background: white;
+      border-radius: 14px;
+      padding: 11px;
+      border: 1px solid #d8ecff;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--navy);
+      text-align: center;
+    }
+
+    .kano-chart {
+      height: 210px;
+      border-radius: 18px;
+      background:
+        linear-gradient(to top, transparent 49%, #c9dff5 50%, transparent 51%),
+        linear-gradient(to right, transparent 49%, #c9dff5 50%, transparent 51%),
+        #ffffff;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #d8ecff;
+    }
+
+    .curve {
+      position: absolute;
+      width: 220px;
+      height: 100px;
+      border: 5px solid var(--cyan);
+      border-color: var(--cyan) transparent transparent transparent;
+      border-radius: 50%;
+      transform: rotate(-28deg);
+      left: 22px;
+      top: 48px;
+    }
+
+    .curve2 {
+      position: absolute;
+      width: 180px;
+      height: 120px;
+      border: 5px solid #0057a8;
+      border-color: transparent transparent #0057a8 transparent;
+      border-radius: 50%;
+      transform: rotate(-28deg);
+      left: 46px;
+      top: 48px;
+    }
+
+    .poster-bottom {
+      padding: 0 26px 26px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    .qr-placeholder {
+      width: 130px;
+      height: 130px;
+      margin: 12px auto 0;
+      background:
+        linear-gradient(90deg, #111 10px, transparent 10px) 0 0 / 26px 26px,
+        linear-gradient(#111 10px, transparent 10px) 0 0 / 26px 26px,
+        #fff;
+      border: 10px solid white;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+    }
+
     footer {
       text-align: center;
       padding: 36px 20px;
@@ -152,18 +375,15 @@
       font-size: 14px;
     }
 
-    @media print {
-      body {
-        background: white;
+    @media (max-width: 800px) {
+      .poster-top,
+      .poster-body,
+      .poster-bottom {
+        grid-template-columns: 1fr;
       }
 
-      main {
-        margin: 20px auto;
-      }
-
-      .card {
-        box-shadow: none;
-        border: 1px solid #ddd;
+      .poster-logo {
+        width: 110px;
       }
     }
   </style>
@@ -171,9 +391,10 @@
 
 <body>
   <header>
+    <img src="logoum.png" alt="University of Malaya Logo" class="um-logo" />
     <h1>Full References & Research Details</h1>
     <p>A Data-Driven Requirement Prioritization Framework for Smartwatch Product Development Projects</p>
-    <p>Fang Yu | University of Malaya</p>
+    <p>Fang Yu | Faculty of Built Environment | University of Malaya</p>
   </header>
 
   <main>
@@ -231,9 +452,7 @@
           Latent Dirichlet Allocation.
           <em>Journal of Machine Learning Research, 3</em>, 993–1022.
           <br />
-          <a href="https://www.jmlr.org/papers/v3/blei03a.html" target="_blank">
-            View source
-          </a>
+          <a href="https://www.jmlr.org/papers/v3/blei03a.html" target="_blank">View source</a>
         </li>
 
         <li>
@@ -241,9 +460,7 @@
           Wearable technologies: The role of usefulness and visibility in smartwatch adoption.
           <em>Computers in Human Behavior, 65</em>, 276–284.
           <br />
-          <a href="https://doi.org/10.1016/j.chb.2016.07.047" target="_blank">
-            https://doi.org/10.1016/j.chb.2016.07.047
-          </a>
+          <a href="https://doi.org/10.1016/j.chb.2016.07.047" target="_blank">https://doi.org/10.1016/j.chb.2016.07.047</a>
         </li>
 
         <li>
@@ -251,9 +468,7 @@
           Quantification and integration of Kano’s model into QFD for optimising product design.
           <em>International Journal of Production Research, 52</em>.
           <br />
-          <a href="https://doi.org/10.1080/00207543.2014.939777" target="_blank">
-            https://doi.org/10.1080/00207543.2014.939777
-          </a>
+          <a href="https://doi.org/10.1080/00207543.2014.939777" target="_blank">https://doi.org/10.1080/00207543.2014.939777</a>
         </li>
 
         <li>
@@ -261,9 +476,7 @@
           Attractive quality and must-be quality.
           <em>Journal of the Japanese Society for Quality Control, 14</em>(2), 147–156.
           <br />
-          <a href="https://doi.org/10.20684/quality.14.2_147" target="_blank">
-            https://doi.org/10.20684/quality.14.2_147
-          </a>
+          <a href="https://doi.org/10.20684/quality.14.2_147" target="_blank">https://doi.org/10.20684/quality.14.2_147</a>
         </li>
 
         <li>
@@ -271,9 +484,7 @@
           A review on classifying and prioritizing user review-based software requirements.
           <em>JOIV: International Journal on Informatics Visualization, 8</em>, 1651.
           <br />
-          <a href="https://doi.org/10.62527/joiv.8.3-2.3450" target="_blank">
-            https://doi.org/10.62527/joiv.8.3-2.3450
-          </a>
+          <a href="https://doi.org/10.62527/joiv.8.3-2.3450" target="_blank">https://doi.org/10.62527/joiv.8.3-2.3450</a>
         </li>
 
         <li>
@@ -281,11 +492,117 @@
           Identifying customer needs from user-generated content.
           <em>Marketing Science, 38</em>.
           <br />
-          <a href="https://doi.org/10.1287/mksc.2018.1123" target="_blank">
-            https://doi.org/10.1287/mksc.2018.1123
-          </a>
+          <a href="https://doi.org/10.1287/mksc.2018.1123" target="_blank">https://doi.org/10.1287/mksc.2018.1123</a>
         </li>
       </ol>
+    </section>
+
+    <section class="card">
+      <h2>Poster Preview</h2>
+
+      <div class="poster-wrap">
+        <div class="poster">
+          <div class="poster-top">
+            <div class="poster-title">
+              <h3>A Data-Driven Requirement Prioritization Framework for Smartwatch Product Development Projects</h3>
+              <p>
+                Fang Yu | Supervisor: Assoc. Prof. Sr Dr. Saipol Bari Abd Karim<br />
+                Faculty of Built Environment, University of Malaya
+              </p>
+            </div>
+            <img src="logoum.png" alt="University of Malaya Logo" class="poster-logo" />
+          </div>
+
+          <div class="poster-body">
+            <div class="poster-box">
+              <h4>Abstract</h4>
+              <p>
+                This study develops a data-driven framework integrating online review mining,
+                LDA topic modeling, and a modified quantitative Kano model to identify and
+                prioritize smartwatch user requirements.
+              </p>
+
+              <h4>Research Gap</h4>
+              <ul>
+                <li>Limited smartwatch requirement prioritization studies.</li>
+                <li>Traditional methods are often subjective.</li>
+                <li>Limited integration of LDA and Kano evaluation.</li>
+              </ul>
+            </div>
+
+            <div class="poster-box">
+              <h4>LDA Requirement Identification</h4>
+
+              <div class="smartwatch">
+                <div class="watch-screen">
+                  <div class="time">10:28</div>
+                  <div class="metric">Health • Fitness • Battery</div>
+                </div>
+              </div>
+
+              <div class="flow">
+                <div>Online Reviews</div>
+                <div>Text Cleaning & Tokenization</div>
+                <div>LDA Topic Modeling</div>
+                <div>User Requirement Themes</div>
+                <div>Initial Importance Score</div>
+              </div>
+
+              <div class="topics">
+                <div class="topic">Health Monitoring</div>
+                <div class="topic">Battery Life</div>
+                <div class="topic">Fitness Tracking</div>
+                <div class="topic">Notifications</div>
+              </div>
+            </div>
+
+            <div class="poster-box">
+              <h4>Quantitative Kano Model</h4>
+              <div class="kano-chart">
+                <div class="curve"></div>
+                <div class="curve2"></div>
+              </div>
+
+              <p>
+                Kano classification is used to adjust the initial importance score based on
+                customer satisfaction and dissatisfaction effects.
+              </p>
+
+              <h4>Final Output</h4>
+              <ul>
+                <li>Requirement priority ranking</li>
+                <li>Function optimization guidance</li>
+                <li>Resource allocation support</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="poster-bottom">
+            <div class="poster-box">
+              <h4>Expected Findings</h4>
+              <ul>
+                <li>Major smartwatch user requirement themes identified.</li>
+                <li>Initial importance calculated using topic frequency.</li>
+                <li>Requirement importance adjusted using Kano satisfaction logic.</li>
+              </ul>
+            </div>
+
+            <div class="poster-box">
+              <h4>Conclusion</h4>
+              <p>
+                The framework supports requirement evaluation, product improvement, and
+                development resource allocation decisions.
+              </p>
+            </div>
+
+            <div class="poster-box">
+              <h4>Full References</h4>
+              <p>Scan the QR code on the printed poster to view complete references and research details.</p>
+              <div class="qr-placeholder"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="card">
@@ -293,8 +610,8 @@
 
       <div class="note">
         This webpage supports the printed poster by providing the full reference list and
-        related research details in a clean digital format. It is intended to reduce visual
-        crowding on the poster while preserving access to complete citation information.
+        related research details in a clean digital format. It reduces visual crowding on the
+        poster while preserving access to complete citation information.
       </div>
     </section>
   </main>
