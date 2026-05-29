@@ -1,1 +1,306 @@
-TEST
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>References | Smartwatch Requirement Prioritization Framework</title>
+
+  <style>
+    :root {
+      --blue: #0057a8;
+      --navy: #0b1f3a;
+      --cyan: #2bb3ff;
+      --soft: #f4f8fc;
+      --text: #1f2937;
+      --muted: #667085;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #eef7ff 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      color: white;
+      padding: 54px 24px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 14px;
+      font-size: clamp(28px, 5vw, 48px);
+      line-height: 1.15;
+      font-weight: 800;
+    }
+
+    header p {
+      margin: 8px auto;
+      max-width: 900px;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: -36px auto 60px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 18px 45px rgba(11, 31, 58, 0.12);
+      border: 1px solid rgba(0, 87, 168, 0.08);
+    }
+
+    h2 {
+      color: var(--navy);
+      margin-top: 0;
+      font-size: 28px;
+      border-left: 6px solid var(--cyan);
+      padding-left: 14px;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .meta div {
+      background: var(--soft);
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px solid #d9ecff;
+    }
+
+    .meta strong {
+      display: block;
+      color: var(--blue);
+      margin-bottom: 4px;
+    }
+
+    .framework {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .step {
+      background: linear-gradient(180deg, #ffffff, #f1f8ff);
+      border: 1px solid #d6ecff;
+      border-radius: 18px;
+      padding: 18px;
+      text-align: center;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .arrow {
+      color: var(--cyan);
+      font-size: 26px;
+      font-weight: 900;
+      text-align: center;
+      margin: 4px 0;
+    }
+
+    ol.references {
+      padding-left: 22px;
+    }
+
+    ol.references li {
+      margin-bottom: 20px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #e6eef7;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .note {
+      background: #eef7ff;
+      border-left: 5px solid var(--blue);
+      padding: 18px 22px;
+      border-radius: 14px;
+      color: var(--navy);
+    }
+
+    footer {
+      text-align: center;
+      padding: 36px 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      main {
+        margin: 20px auto;
+      }
+
+      .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Full References & Research Details</h1>
+    <p>A Data-Driven Requirement Prioritization Framework for Smartwatch Product Development Projects</p>
+    <p>Fang Yu | University of Malaya</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Research Information</h2>
+
+      <div class="meta">
+        <div>
+          <strong>Student Name</strong>
+          Fang Yu
+        </div>
+
+        <div>
+          <strong>Supervisor</strong>
+          Assoc. Prof. Sr Dr. Saipol Bari Abd Karim
+        </div>
+
+        <div>
+          <strong>Faculty</strong>
+          Faculty of Built Environment
+        </div>
+
+        <div>
+          <strong>University</strong>
+          University of Malaya
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Research Framework</h2>
+
+      <p>
+        This study proposes a data-driven requirement prioritization framework that integrates
+        online review mining, Latent Dirichlet Allocation topic modeling, and a modified
+        quantitative Kano model to support smartwatch product development decision-making.
+      </p>
+
+      <div class="framework">
+        <div class="step">Online Reviews</div>
+        <div class="step">Text Processing</div>
+        <div class="step">LDA Topic Modeling</div>
+        <div class="step">Requirement Themes</div>
+        <div class="step">Kano Evaluation</div>
+        <div class="step">Final Prioritization</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>References</h2>
+
+      <ol class="references">
+        <li>
+          Blei, D. M., Ng, A. Y., & Jordan, M. I. (2003).
+          Latent Dirichlet Allocation.
+          <em>Journal of Machine Learning Research, 3</em>, 993–1022.
+          <br />
+          <a href="https://www.jmlr.org/papers/v3/blei03a.html" target="_blank">
+            View source
+          </a>
+        </li>
+
+        <li>
+          Chuah, S. H.-W., Rauschnabel, P. A., Krey, N., Nguyen, B., Ramayah, T., & Lade, S. (2016).
+          Wearable technologies: The role of usefulness and visibility in smartwatch adoption.
+          <em>Computers in Human Behavior, 65</em>, 276–284.
+          <br />
+          <a href="https://doi.org/10.1016/j.chb.2016.07.047" target="_blank">
+            https://doi.org/10.1016/j.chb.2016.07.047
+          </a>
+        </li>
+
+        <li>
+          Ji, P., Jin, J., Wang, T., & Chen, Y. (2014).
+          Quantification and integration of Kano’s model into QFD for optimising product design.
+          <em>International Journal of Production Research, 52</em>.
+          <br />
+          <a href="https://doi.org/10.1080/00207543.2014.939777" target="_blank">
+            https://doi.org/10.1080/00207543.2014.939777
+          </a>
+        </li>
+
+        <li>
+          Kano, N., Seraku, N., Takahashi, F., & Tsuji, S. (1984).
+          Attractive quality and must-be quality.
+          <em>Journal of the Japanese Society for Quality Control, 14</em>(2), 147–156.
+          <br />
+          <a href="https://doi.org/10.20684/quality.14.2_147" target="_blank">
+            https://doi.org/10.20684/quality.14.2_147
+          </a>
+        </li>
+
+        <li>
+          Salleh, A., Said, M., Osman, M. H., & Hassan, S. (2024).
+          A review on classifying and prioritizing user review-based software requirements.
+          <em>JOIV: International Journal on Informatics Visualization, 8</em>, 1651.
+          <br />
+          <a href="https://doi.org/10.62527/joiv.8.3-2.3450" target="_blank">
+            https://doi.org/10.62527/joiv.8.3-2.3450
+          </a>
+        </li>
+
+        <li>
+          Timoshenko, A., & Hauser, J. (2019).
+          Identifying customer needs from user-generated content.
+          <em>Marketing Science, 38</em>.
+          <br />
+          <a href="https://doi.org/10.1287/mksc.2018.1123" target="_blank">
+            https://doi.org/10.1287/mksc.2018.1123
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Poster QR Code Purpose</h2>
+
+      <div class="note">
+        This webpage supports the printed poster by providing the full reference list and
+        related research details in a clean digital format. It is intended to reduce visual
+        crowding on the poster while preserving access to complete citation information.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Fang Yu | Faculty of Built Environment | University of Malaya
+  </footer>
+</body>
+</html>
